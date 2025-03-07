@@ -1,0 +1,55 @@
+﻿<Page x:Class="IS_Studio_PlanetShoes.Views.CatalogoView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IS_Studio_PlanetShoes.Views"
+      mc:Ignorable="d" 
+      Title="CatalogoView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Button Grid.Column="0" Grid.Row="1"
+                        x:Name="btnMakeQuoteForMateus"
+                        ToolTip="Make a quote for Mateus Facas"
+                        Width="25" Height="25"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Click="btnOrcamentoMateus"
+            >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/LogoMateusFacas.jpg"
+                           Width="20" Height="20"/>
+                </Button>
+
+                <Button Grid.Column="0" Grid.Row="1"
+                x:Name="btnMakeQuoteForUsinova"
+                ToolTip="Make a quote for Mateus Facas"
+                Width="25" Height="25"
+                Margin="0,0,5,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Click="btnOrcamentoUsinova"
+    >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/LogoUsinova.jpg"
+                   Width="20" Height="20"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Vertical">
+                <TextBlock>Lenght result:</TextBlock>
+                <TextBox x:Name="txtLengthResult"></TextBox>
+                <TextBlock>Budget:</TextBlock>
+                <TextBox x:Name="txtBudgetResult"></TextBox>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

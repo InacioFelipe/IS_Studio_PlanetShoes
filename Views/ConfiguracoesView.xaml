@@ -1,0 +1,16 @@
+﻿<Page x:Class="IS_Studio_PlanetShoes.Views.ConfiguracoesView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IS_Studio_PlanetShoes.Views"
+      mc:Ignorable="d" 
+      Title="ConfiguracoesView">
+
+    <Grid>
+        <TextBlock
+            Margin="30"
+            HorizontalAlignment="Center"
+            Text="Configurações" />
+    </Grid>
+</Page>

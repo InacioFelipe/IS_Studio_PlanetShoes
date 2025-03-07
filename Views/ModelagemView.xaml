@@ -1,0 +1,688 @@
+﻿<Page x:Class="IS_Studio_PlanetShoes.Views.ModelagemView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IS_Studio_PlanetShoes.Views"
+      mc:Ignorable="d" 
+      Title="ModelagemView">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Inicio de substituir objetos por tamanho -->
+        <StackPanel Grid.Column="0" Grid.Row="0"
+                    VerticalAlignment="Center"
+                    >
+            <TextBlock Text="Find and replace shapes by size:"
+                       FontSize="12" FontWeight="Bold"
+                       >
+            </TextBlock>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0,0,0,0"
+                    >
+            <!-- Inicio Grid of Sources -->
+            <Grid Margin="0,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Inicio Linha 1 "Source"-->
+                <TextBlock Grid.Column="2" Grid.Row="0"
+                           Text="Source"
+                           Margin="0,5,0,0"
+                           />
+
+                <!-- Inicio Linha 2 "X"-->
+                <Button Grid.Column="0" Grid.Row="1"
+                        x:Name="btnGetPropertiesOfSourceObject"
+                        ToolTip="Gets the size properties of the selected shape"
+                        Width="25" Height="25"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Click="btnGetPropertiesOfSourceObject_Click"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/ContaGotasPropriedades.png"
+                            Width="20" Height="20"/>
+                </Button>
+                <TextBlock Grid.Column="1" Grid.Row="1"
+                           Text="X:"
+                           Margin="0,5,0,0"
+                           />
+                <TextBox Grid.Column="2" Grid.Row="1"
+                         Margin="0,0,5,0"
+                         Width="50"
+                         x:Name="txtSizeWidthSource"
+                         Text="0,02"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         />
+                
+                <!-- Inicio Linha 3 "Y"-->
+                <TextBlock Grid.Column="1" Grid.Row="2"
+                           Text="Y:"
+                           Margin="0,5,0,0"
+                           />
+                <TextBox Grid.Column="2" Grid.Row="2"
+                         Margin="0,0,5,0"
+                         Width="50"
+                         x:Name="txtSizeHeightSource"
+                         Text="0,02"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"/>
+            </Grid>
+
+            <!-- Inicio Grid of Targets -->
+            <Grid Margin="20,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Inicio Linha 1 "Target"-->
+                <TextBlock Grid.Column="2" Grid.Row="0"
+                           Text="Target"
+                           Margin="0,5,0,0"
+                           />
+
+                <!-- Inicio Linha 2 "X"-->
+                <Button Grid.Column="0" Grid.Row="1"
+                        x:Name="btnGetPropertiesOfTargetObject"
+                        ToolTip="Gets the size properties of the selected shape"
+                        Width="25" Height="25"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Click="btnGetPropertiesOfDestinyObject_Click"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/ContaGotasPropriedades.png"
+                            Width="20" Height="20"/>
+                </Button>
+                <TextBlock Grid.Column="1" Grid.Row="1"
+                           Text="X:"
+                           Margin="0,5,0,0"
+                           />
+                <TextBox Grid.Column="2" Grid.Row="1"
+                         Margin="0,0,5,0"
+                         Width="50"
+                         x:Name="txtSizeWidthTarget"
+                         Text="2,00"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"/>
+
+                <!-- Inicio Linha 3 "Y"-->
+                <TextBlock Grid.Column="1" Grid.Row="2"
+                           Text="Y:"
+                           Margin="0,5,0,0"
+                           />
+                <TextBox Grid.Column="2" Grid.Row="2"
+                         Margin="0,0,5,0"
+                         Width="50"
+                         x:Name="txtSizeHeightTarget"
+                         Text="2,00"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"/>
+            </Grid>
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center"
+                    >
+            <Button
+                x:Name="btnReplacePropertyOfObject"
+                ToolTip="Apply these values to all shapes on the page"
+                Width="243" Height="23"
+                Margin="0,5,0,10"
+                Click ="btnReplacePropertyOfObject_Click"
+                >
+                Apply
+            </Button>
+        </StackPanel>
+        <!-- Fim de Substituir objetos por tamanho -->
+
+        <StackPanel Grid.Column="0" Grid.Row="3">
+            <Line X1="0" Y1="0" X2="243" Y2="0" Stroke="LightGray"  StrokeThickness="1"/>
+        </StackPanel>
+
+        <!-- Inicio de Progressoes para palmihas -->
+        <StackPanel Grid.Column="0" Grid.Row="4"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Generate progressions for insoles:"
+                       FontSize="12" FontWeight="Bold"
+                       Margin="0,5,0,0"
+                       />
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="5"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="0,5,0,0"
+                    >
+            <Grid Margin="0,0,0,3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+
+                <!-- Inicio Linha 1 -->
+                <Button Grid.Column="0" Grid.Row="0"
+                        x:Name="btnIdentifiesAndCalculatesTheValueOfProgressionX"
+                        ToolTip="Select the shapes to calculate your progression"
+                        Width="25" Height="25"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Click="btnIdentifiesAndCalculatesTheValueOfProgressionX_Click"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/ContaGotasPropriedades.png"
+                            Width="20" Height="20"/>
+                </Button>
+                <TextBlock Grid.Column="1" Grid.Row="0"
+                           Text="X:"
+                           Margin="0,5,0,0"
+                           />
+                <TextBox Grid.Column="2" Grid.Row="0"
+                         x:Name="txtProgressionValueX"
+                         Margin="0,0,5,0"
+                         Width="50"
+                         Text="0,02"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="3" Grid.Row="0"
+                        x:Name="cbxListOfShapesX"
+                        Width="147" Height="23"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                       />
+
+                <!-- Inicio Linha 2 -->
+                <Button Grid.Column="0" Grid.Row="2"
+                        x:Name="btnIdentifiesAndCalculatesTheValueOfProgressionY"
+                        ToolTip="Select the shapes to calculate your progression"
+                        Width="25" Height="25"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Click="btnIdentifiesAndCalculatesTheValueOfProgressionY_Click"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/ContaGotasPropriedades.png"
+                            Width="20" Height="20"/>
+                </Button>
+                <TextBlock Grid.Column="1" Grid.Row="2"
+                           Text="Y:"
+                           Margin="0,5,0,0"
+                           />
+                <TextBox Grid.Column="2" Grid.Row="2"
+                         x:Name="txtProgressionValueY"
+                         Margin="0,0,5,0"
+                         Width="50"
+                         Text="0,02"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="3" Grid.Row="2"
+                        x:Name="cbxListOfShapesY"
+                        Width="147" Height="23"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                       />
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="6"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Grid Margin="0,0,0,3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0"
+                           Text="--- "
+                           Margin="0,5,0,0"
+                           />
+                <TextBox Grid.Column="1" Grid.Row="0"
+                         Margin="0,5,5,0"
+                         Width="50"
+                         x:Name="txtNumberOfProgressionsToDown"
+                         Text="4"
+                         HorizontalContentAlignment="Center"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"/>
+                
+                <TextBlock Grid.Column="2" Grid.Row="0"
+                           Text=" --- "
+                           Margin="0,5,0,0"
+                           />
+                <TextBox Grid.Column="3" Grid.Row="0"
+                         Margin="0,5,5,0"
+                         Width="50"
+                         x:Name="txtPiloto"
+                         Text="38"
+                         HorizontalContentAlignment="Center"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"/>
+                
+                <TextBlock Grid.Column="4" Grid.Row="0"
+                           Text=" --- "
+                           Margin="0,5,0,0"
+                           />
+                <TextBox Grid.Column="5" Grid.Row="0"
+                         Margin="0,5,5,0"
+                         Width="50"
+                         x:Name="txtNumberOfProgressionsToUpper"
+                         Text="5"
+                         HorizontalContentAlignment="Center"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="6" Grid.Row="0"
+                           Text=" ---"
+                           Margin="0,5,0,0"
+                           />
+
+            </Grid>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="7"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center">
+            <Button 
+                x:Name="btnProgressApply"
+                Width="243" Height="23"
+                Margin="0,0,5,10"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Click="btnProgressApply_Click"
+                >
+                Apply
+            </Button>
+        </StackPanel>
+        <!-- Fim de Gerar progressoes para palmihas -->
+
+        <StackPanel Grid.Column="0" Grid.Row="8">
+            <Line X1="0" Y1="0" X2="243" Y2="0" Stroke="LightGray"  StrokeThickness="1"/>
+        </StackPanel>
+        
+        <!-- Inicio de Colocar piques de identificacao -->
+        <StackPanel Grid.Column="0" Grid.Row="9"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Put identification marks on the pieces:"
+                       FontSize="12" FontWeight="Bold"
+                       Margin="0,0,0,5"
+                       >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="10"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0,0,0,10"
+                    >
+            <!-- Inicio Grid of Marks -->
+            <Grid Margin="0,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48.6"/>
+                    <ColumnDefinition Width="48.6"/>
+                    <ColumnDefinition Width="51.6"/>
+                    <ColumnDefinition Width="48.6"/>
+                    <ColumnDefinition Width="48.6"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Inicio Linha 1 -->
+                <Button Grid.Column="0" Grid.Row="1"
+                        x:Name="btnPutMark34"
+                        ToolTip="Put the pike 34"
+                        Width="30" Height="30"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Click="btnPutMark34_Click"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Mark34.png"
+                            Width="25   " Height="25"
+                            HorizontalAlignment="Center"
+                           />
+
+                </Button>
+             
+                <Button Grid.Column="1" Grid.Row="1"
+                        x:Name="btnPutMark35"
+                        ToolTip="Put the pike 35"
+                        Width="30" Height="30"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Click="btnPutMark35_Click"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Mark35.png"
+                           Width="25" Height="25"
+                            HorizontalAlignment="Center"
+                           />
+
+                </Button>
+
+                <Button Grid.Column="2" Grid.Row="1"
+                        x:Name="btnPutMark36"
+                        ToolTip="Put the pike 36"
+                        Width="30" Height="30"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Mark36.png"
+                           Width="25" Height="25"
+                            HorizontalAlignment="Center"
+                           />
+
+                </Button>
+
+                <Button Grid.Column="3" Grid.Row="1"
+                        x:Name="btnPutMark37"
+                        ToolTip="Put the pike 37"
+                        Width="30" Height="30"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Mark37.png"
+                           Width="25" Height="25"
+                            HorizontalAlignment="Center"
+                           />
+
+                </Button>
+
+                <Button Grid.Column="4" Grid.Row="1"
+                        x:Name="btnPutMark38"
+                        ToolTip="Put the pike 38"
+                        Width="30" Height="30"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Mark38.png"
+                           Width="25" Height="25"
+                            HorizontalAlignment="Center"
+                           />
+
+                </Button>
+                
+                <!-- Inicio Linha 2 -->
+                <Button Grid.Column="0" Grid.Row="3"
+                        x:Name="btnPutMark39"
+                        ToolTip="Put the pike 39"
+                        Width="30" Height="30"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Mark39.png"
+                           Width="25" Height="25"
+                            HorizontalAlignment="Center"
+                           />
+
+                </Button>
+
+                <Button Grid.Column="1" Grid.Row="3"
+                        x:Name="btnPutMark40"
+                        ToolTip="Put the pike 40"
+                        Width="30" Height="30"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Mark40.png"
+                           Width="25" Height="25"
+                            HorizontalAlignment="Center"
+                           />
+
+                </Button>
+
+                <Button Grid.Column="2" Grid.Row="3"
+                        x:Name="btnPutMark41"
+                        ToolTip="Put the pike 41"
+                        Width="30" Height="30"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Mark41.png"
+                           Width="25" Height="25"
+                            HorizontalAlignment="Center"
+                           />
+
+                </Button>
+
+                <Button Grid.Column="3" Grid.Row="3"
+                        x:Name="btnPutMark42"
+                        ToolTip="Put the pike 42"
+                        Width="30" Height="30"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Mark42.png"
+                           Width="25" Height="25"
+                            HorizontalAlignment="Center"
+                           />
+
+                </Button>
+
+                <Button Grid.Column="4" Grid.Row="3"
+                        x:Name="btnPutMark43"
+                        ToolTip="Put the pike 43"
+                        Width="30" Height="30"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Mark43.png"
+                           Width="25" Height="25"
+                            HorizontalAlignment="Center"
+                           />
+
+                </Button>
+            </Grid>
+        </StackPanel>
+        <!-- Fim de Colocar piques de identificacao -->
+
+        <StackPanel Grid.Column="0" Grid.Row="11">
+            <Line X1="0" Y1="0" X2="243" Y2="0" Stroke="LightGray"  StrokeThickness="1"/>
+        </StackPanel>
+        
+        <!-- Inicio Organizar objetos por camadas -->
+        <StackPanel Grid.Column="0" Grid.Row="12"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center"
+            Margin="0,5,0,5"
+            >
+            <TextBlock Text="Organize shapes by Layers:"
+               FontSize="12" FontWeight="Bold"
+               >
+            </TextBlock>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="13"
+            Orientation="Horizontal"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center"
+            >
+            
+            <TextBlock Grid.Column="1" Grid.Row="2"
+               Text="Get part:"
+               Margin="0,5,0,0"
+               HorizontalAlignment="Center"
+            />
+            <ComboBox
+                x:Name="cbxPartOfString"
+                Width="50" Height="23"
+                Margin="5,0,0,0"
+            />
+            <CheckBox x:Name="chkReverse"
+                Content="Reverse"
+                Width="60" Height="23"
+                Margin="15,5,0,0"
+            />
+            <Button
+                x:Name="btnCreateAndMoveObjectToLayerWithTheNameOfObject"
+                ToolTip="Create Layers with the name of objects"
+                Width="25" Height="25"
+                Margin="40,0,0,0"
+                HorizontalAlignment="Left"
+                Click="btnCreateAndMoveObjectToLayerWithTheNameOfObject_Click"
+                    >
+                   <Image Source="/IS_Studio_PlanetShoes;component/Resources/Camadas.png"
+                   Width="20" Height="20"
+                   HorizontalAlignment="Center"
+                    />
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="14"
+            Orientation="Vertical"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            >
+
+           <TextBlock
+               Text="Move selection to layer:"
+               Margin="0,5,0,0"
+               HorizontalAlignment="Left"
+            />
+            <StackPanel Grid.Column="0" Grid.Row="14"
+            Orientation="Horizontal"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            >
+                <ComboBox
+                x:Name="cbxListOfLayers"
+                Width="170" Height="23"
+                Margin="0,5,0,0"
+                HorizontalAlignment="Left"
+                />
+                <Button
+                    x:Name="btnPopulaListaComCamadas"
+                    ToolTip="Atualiza Lista com as camadas do documento"
+                    Width="25" Height="25"
+                    Margin="15,0,0,0"
+                    HorizontalAlignment="Left"
+                    Click="btnPopulaListaComCamadas_Click"
+                    >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Atualizar.png"
+                       Width="20" Height="20"
+                       HorizontalAlignment="Center"
+                        />
+                </Button>
+                <Button
+                    x:Name="btnEnviaSelecaoParaCamada"
+                    ToolTip="Envia seleção para camada da lista"
+                    Width="25" Height="25"
+                    Margin="5,0,0,0"
+                    HorizontalAlignment="Left"
+                    Click="btnEnviaSelecaoParaCamada_Click"
+                    >
+                       <Image Source="/IS_Studio_PlanetShoes;component/Resources/Exportar.png"
+                       Width="20" Height="20"
+                       HorizontalAlignment="Center"
+                        />
+                </Button>
+                <Button
+    x:Name="btnTeste_01"
+    ToolTip="Envia seleção para camada da lista"
+    Width="25" Height="25"
+    Margin="5,0,0,0"
+    HorizontalAlignment="Left"
+    >
+                    <Image Source="/IS_Studio_PlanetShoes;component/Resources/Exportar.png"
+       Width="20" Height="20"
+       HorizontalAlignment="Center"
+        />
+                </Button>
+                <Button
+    x:Name="btnTeste_02"
+    ToolTip="Envia seleção para camada da lista"
+    Width="25" Height="25"
+    Margin="5,0,0,0"
+    HorizontalAlignment="Left"
+    Click="btnTeste_03"
+    >
+       <Image Source="/IS_Studio_PlanetShoes;component/Resources/Pino-Mola.png"
+       Width="20" Height="20"
+       HorizontalAlignment="Center"
+        />
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        
+        <!-- Fim de Organizar objetos por camadas -->
+
+    </Grid>
+</Page>
